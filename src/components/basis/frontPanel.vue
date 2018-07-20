@@ -2,7 +2,7 @@
     <!--布防管理的面板组件-->
 <div>
   <!-- Large modal -->
-  <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">
+  <button type="button" class="btn btn-xs btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">
 
     <img src="../../assets/img/index/icon_more.png" alt="" width="18"><span style="font-size: 16px">详情</span>
 

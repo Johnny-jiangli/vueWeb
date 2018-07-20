@@ -1,44 +1,54 @@
 <template>
-  <table class="table">
-      <thead>
-        <th>序号</th>
-        <th>布防名称</th>
-        <th>设备</th>
-        <th>算法</th>
-        <th>安装地点</th>
-        <th>阀值</th>
-        <th>状态</th>
-        <th>操作</th>
-      </thead>
-      <tbody>
-        <tr v-for="(item,index) in items">
-          <td>{{item.deviceId}}</td>
-          <td>{{item.deviceName}}</td>
-          <td>{{item.device}}</td>
-          <td>{{item.deviceALG}}</td>
-          <td>{{item.deviceAddress}}</td>
-          <td>{{item.deviceFa}}</td>
+  <!--设备布防组件-->
+  <!--<div class="container">-->
+        <table class="table table-responsive">
+          <thead>
+          <tr>
+            <th>序号</th>
+            <th>布防名称</th>
+            <th>设备</th>
+            <th>算法</th>
+            <th>安装地点</th>
+            <th>阀值</th>
+            <th>开关</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <tr v-for="(item,index) in items">
+            <td>{{index}}</td>
+            <td>{{item.deviceName}}</td>
+            <td>{{item.device}}</td>
+            <td>{{item.deviceALG}}</td>
+            <td>{{item.deviceAddress}}</td>
+            <td>{{item.deviceFa}}</td>
+            <td>
+              <div class="material-switch">
+                <input id="someSwitchOptionPrimary" v-bind:name="deviceStatus" type="checkbox"/>
+                <label for="someSwitchOptionPrimary" class="label-success"></label>
+              </div>
+            </td>
+            <td>
+              <div class="material-switch">
+                <input id="someSwitchOptionSuccess" v-bind:name="deviceStatus" type="checkbox"/>
+                <label for="someSwitchOptionSuccess" class="label-success"></label>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+  <!--</div>-->
 
-          <td class="td">
-            <div class="material-switch pull-right">
-              <input id="someSwitchOptionSuccess" name="dd" type="checkbox"/>
-              <label for="someSwitchOptionSuccess" class="label-success"></label>
-            </div>
-          </td>
-          <td>
-            <front-panel></front-panel>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+
+
 </template>
 
 <script>
-  import FrontPanel from '../basis/frontPanel'
     export default {
         name: "site-main-table",
       components:{
-          FrontPanel
       }
       ,
       data(){
@@ -76,19 +86,16 @@
 </script>
 
 <style scoped>
-  table{
-    position: relative;
-    background: white;
-    color: #0f0f0f;
-  }
-thead{
-  background: #cccccc;
+
+
+table{
+  font-size: 14px;
+  color: #0f0f0f;
 }
 th,td{
-  height: 80px;
-  line-height: 80px;
-  text-align: center;
+  height: 70px;
 }
+
 .material-switch > input[type="checkbox"] {
   display: none;
 }
@@ -103,29 +110,27 @@ th,td{
 .material-switch > label::before {
   background: rgb(0, 0, 0);
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
+  border-radius: 8px;
   content: '';
-  height: 25px;
-  margin-top: 1px;
-  margin-left: -130%;
+  height: 16px;
+  margin-top: -8px;
   position:absolute;
   opacity: 0.3;
   transition: all 0.4s ease-in-out;
-  width: 120%;
+  width: 40px;
 }
 .material-switch > label::after {
   background: rgb(255, 255, 255);
   border-radius: 16px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   content: '';
-  height:25px;
-  left: -10%;
-  margin-top:0;
-  margin-left: -66%;
+  height: 24px;
+  left: -4px;
+  margin-top: -8px;
   position: absolute;
-  top: 0;
+  top: -4px;
   transition: all 0.3s ease-in-out;
-  width: 55%;
+  width: 24px;
 }
 .material-switch > input[type="checkbox"]:checked + label::before {
   background: inherit;
@@ -133,6 +138,6 @@ th,td{
 }
 .material-switch > input[type="checkbox"]:checked + label::after {
   background: inherit;
-  left: 50%;
+  left: 20px;
 }
 </style>
