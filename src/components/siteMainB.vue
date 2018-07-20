@@ -1,24 +1,24 @@
 <template>
   <div class="wai">
     <div class="bar">
-    <site-main-navigation-bar></site-main-navigation-bar>
+      <site-main-navigation-bar></site-main-navigation-bar>
     </div>
     <div class="bar1">
-    <site-main-table></site-main-table>
+      <site-mains-device></site-mains-device>
     </div>
   </div>
 </template>
 
 <script>
   import SiteMainNavigationBar from './basis/siteMainNavigationBar'
-  import SiteMainTable from './basis/siteMainTable'
-    export default {
-        name: "site-main",
-      components:{
-          SiteMainNavigationBar,
-          SiteMainTable
-      }
+  import SiteMainsDevice from './basis/siteMainsDevice'
+  export default {
+    name: "site-main-B",
+    components:{
+      SiteMainNavigationBar,
+      SiteMainsDevice
     }
+  }
 </script>
 
 <style scoped>
