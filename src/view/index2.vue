@@ -1,29 +1,41 @@
 <template>
-  <div id="">
-    <site-index-navigation-bar></site-index-navigation-bar>
-    <site-main-b></site-main-b>
+  <div>
+    <site-index-navigation-bar>
+    </site-index-navigation-bar>
+    <device>
+
+    </device>
   </div>
+
 </template>
 
 <script>
-  import SiteMainB from '../components/siteMainB'
   import SiteIndexNavigationBar from '../components/basis/siteIndexNavigationBar'
+  import Device from '../components/basis/device'
+  import axios from 'axios'
+
   export default {
-    name: "index",
+    name: "index2",
     components:{
-      SiteMainB,
-      SiteIndexNavigationBar
+      SiteIndexNavigationBar,
+      Device
+    },
+    methods:{
+      submit(e){
+        axios.post('/user', {
+          firstName: 'Fred',
+          lastName: 'Flintstone'
+        })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
     }
   }
 </script>
 
 <style scoped>
-  /*div{*/
-  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
-  /*text-align: center;*/
-  /*!*background: #465484;*!*/
-  /*color: white;*/
-  /*}*/
 </style>

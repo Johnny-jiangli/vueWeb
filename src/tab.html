@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../src/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/assets/js/bootstrap.min.js">
+
+  <style>
+    html,body,#wrapper{
+      height: 100%;
+      width: 100%;
+      background: #F5F6FA;
+    }
+    nav,section,article{
+      box-sizing: border-box;
+    }
+    nav>.inner{
+      background: #F5F6FA;
+      margin: 20px 20px;
+      border-bottom: #ccc solid 1px;
+    }
+
+    nav>.inner li {
+      list-style-type: none;
+      display: inline-block;
+      margin-right:10px;
+      width: 134px;
+      line-height: 34px;
+      text-align: center;
+    }
+    nav>.inner li>a{
+      background: #C6CBD1 ;
+      border-radius: 5px;
+      color: white;
+    }
+    nav>.inner>.nav>.active>a:hover,
+    nav>.inner>.nav>.active>a:focus{
+      background: #465484;
+      color: white;
+    }
+
+    nav>.inner li>a:hover,
+    nav>.inner li>a:focus
+    {
+      background: #465484;
+      color: white;
+    }
+
+    article>.inner,section>.inner{
+      background: white;
+    }
+
+    article>.inner,section>.inner{
+      margin: 20px 20px;
+      padding: 20px 10px;
+      border-radius:5px;
+    }
+
+
+    section>.inner{
+      height: 600px;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+<div id="wrapper">
+  <nav>
+    <div class="inner">
+        <ul class="nav">
+          <li class="active"><a href="#">设备管理</a></li>
+          <li><a href="#">设备布防</a></li>
+          <li><a href="#">推送设置</a></li>
+          <li><a href="#">底库管理</a></li>
+        </ul>
+    </div>
+  </nav>
+  <article>
+    <div class="inner">
+      <button class="btn btn-default"><img src="../src/assets/img/index/icon_add1.png" width="15" alt="">新增</button>
+    </div>
+  </article>
+  <section>
+    <div class="inner">
+      <table class="table table-condensed">
+        <!--<caption>精简表格布局</caption>-->
+        <thead>
+        <tr>
+          <th>名称</th>
+          <th>城市</th>
+          <th>邮编</th>
+          <th>邮编</th>
+          <th>邮编</th>
+          <th>邮编</th>
+          <th>邮编</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Tanmay</td>
+          <td>Bangalore</td>
+          <td>560001</td>
+          <td>560001</td>
+          <td>560001</td>
+          <td>560001</td>
+          <td>
+            <button type="button">详情</button>
+            <button type="button">编辑</button>
+            <button type="button">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Sachin</td>
+          <td>Mumbai</td>
+          <td>400003</td>
+        </tr>
+        <tr>
+          <td>Uma</td>
+          <td>Pune</td>
+          <td>411027</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+</body>
+</html>

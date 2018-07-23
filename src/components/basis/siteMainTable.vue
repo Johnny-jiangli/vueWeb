@@ -17,7 +17,7 @@
           <tbody>
           <tr>
             <tr v-for="(item,index) in items">
-            <td>{{index}}</td>
+            <td><span>{{index}}</span></td>
             <td>{{item.deviceName}}</td>
             <td>{{item.device}}</td>
             <td>{{item.deviceALG}}</td>
@@ -92,9 +92,10 @@ table{
   font-size: 14px;
   color: #0f0f0f;
 }
-th,td{
-  height: 70px;
+thead{
+  background-color: #cccccc;
 }
+
 
 .material-switch > input[type="checkbox"] {
   display: none;

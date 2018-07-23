@@ -7,10 +7,27 @@ import router from './router'
 Vue.config.productionTip = false
 import './assets/css/bootstrap.min.css'
 import './assets/js/bootstrap.min'
+import axios from 'axios'
+Vue.prototype.$http = axios
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  methods:{
+    postData () {
+      this.$http({
+        method: 'post',
+        url: 'https://api.douban.com/v2/book/1220562',
+        data: {
+          name: 'xiaoming',
+          info: '12'
+        }
+      })
+    }
+  }
+
 })

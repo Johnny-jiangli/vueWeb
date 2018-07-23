@@ -1,28 +1,41 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Index from '../view/index'
-import Index2 from '../view/index2'
 
-
+import DeployDefence from '../view/protectionManagement/deployDefence'
+import Device from '../view/protectionManagement/device'
+import IdentificationLibrary from '../view/protectionManagement/identificationLibrary'
+import PushSetting from '../view/protectionManagement/pushSetting'
+import Test from '../view/test'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path:'/',
+      name:'DeployDefence',
+      component:DeployDefence,
+    },
+    {
+      path:'/test2',
+      name:"Device",
+      component:Device
+    },
+    {
+      path:'/PushSetting',
+      name:'PushSetting',
+      component:PushSetting
+    },
+    {
+      path:'/test3',
+      name:'IdentificationLibrary',
+      component:IdentificationLibrary
     },
     {
       path:'/test',
-      name:"Index",
-      component:Index
-    },{
-    path:'/test2',
-      name:'Index2',
-      component:Index2
+      name:'test',
+      component:Test
     }
 
   ]
